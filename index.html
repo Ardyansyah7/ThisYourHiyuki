@@ -3,26 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ardyansyah Yudapratama | Automotive, Media & Poetry</title>
-    <!-- Google Fonts & FontAwesome Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Ardyansyah Yudapratama | Otomotif & Karya</title>
     <style>
-        /* === DESAIN UTAMA & VARIABEL STYLING === */
-        :root {
-            --bg-color: #0b0d12;
-            --card-bg: rgba(22, 27, 38, 0.85);
-            --card-border: rgba(255, 255, 255, 0.08);
-            --accent-red: #e63946;
-            --accent-red-hover: #ff4d5a;
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --font-main: 'Inter', sans-serif;
-        }
-
+        /* Pengaturan Dasar & Reset */
         * {
             margin: 0;
             padding: 0;
@@ -31,285 +14,198 @@
         }
 
         body {
-            font-family: var(--font-main);
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0c10;
+            color: #c5c6c7;
             line-height: 1.7;
-            overflow-x: hidden;
-            /* Latar belakang dinamis otomotif dengan gradien gelap */
-            background-image: 
-                radial-gradient(circle at 15% 15%, rgba(230, 57, 70, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 85% 85%, rgba(230, 57, 70, 0.10) 0%, transparent 40%),
-                linear-gradient(rgba(11, 13, 18, 0.90), rgba(11, 13, 18, 0.96)),
-                url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(rgba(11, 12, 16, 0.92), rgba(11, 12, 16, 0.92)), url('foto-motor.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             background-attachment: fixed;
         }
 
-        /* === HEADER / HERO SECTION === */
+        /* Header / Banner Utama */
         header {
+            background: linear-gradient(135deg, #1f2833, #0b0c10);
             text-align: center;
-            padding: 80px 20px 50px;
-            background: linear-gradient(180deg, rgba(15, 18, 25, 0.95) 0%, rgba(11, 13, 18, 0.6) 100%);
-            border-bottom: 1px solid var(--card-border);
+            padding: 60px 20px;
+            border-bottom: 3px solid #e63946;
         }
 
-        .header-title {
-            font-size: 2.6rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
-        }
-
-        .header-tagline {
-            color: var(--accent-red);
-            font-size: 1.05rem;
-            font-weight: 600;
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
             letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
-        /* === NAVIGASI MELAAYANG (STICKY NAVBAR) === */
+        header p {
+            color: #66fcf1;
+            font-size: 1.1rem;
+        }
+
+        /* Navigasi Melayang (Sticky Navbar) */
         nav {
-            background: rgba(15, 18, 25, 0.88);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            padding: 14px 20px;
+            background-color: rgba(31, 40, 51, 0.95);
+            padding: 15px;
+            text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid var(--card-border);
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #1f2833;
         }
 
         nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 14px;
-            border-radius: 20px;
-        }
-
-        nav a:hover, nav a.active {
             color: #ffffff;
-            background: rgba(230, 57, 70, 0.22);
-            border: 1px solid rgba(230, 57, 70, 0.4);
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
         }
 
-        /* === KONTEN UTAMA === */
+        nav a:hover {
+            color: #e63946;
+        }
+
+        /* Main Container */
         main {
-            max-width: 920px;
+            width: 90%;
+            max-width: 950px;
             margin: 40px auto;
-            padding: 0 20px;
         }
 
+        /* Section Cards */
         section {
-            background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 35px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-            transition: border-color 0.3s ease;
-        }
-
-        section:hover {
-            border-color: rgba(230, 57, 70, 0.35);
+            background-color: rgba(31, 40, 51, 0.85);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            border: 1px solid #1f2833;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
         }
 
         section h2 {
-            font-size: 1.75rem;
-            color: #ffffff;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-bottom: 2px solid var(--card-border);
-            padding-bottom: 12px;
+            color: #e63946;
+            margin-bottom: 18px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e63946;
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
-        section h2 i {
-            color: var(--accent-red);
-        }
-
-        /* === ARTIKEL & KARTU === */
         article {
-            background: rgba(10, 13, 20, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-left: 4px solid var(--accent-red);
-            padding: 22px;
-            border-radius: 10px;
-            margin-top: 20px;
+            background-color: rgba(11, 12, 16, 0.7);
+            padding: 20px;
+            margin-top: 15px;
+            border-left: 4px solid #e63946;
+            border-radius: 6px;
         }
 
         article h3 {
-            font-size: 1.2rem;
             color: #ffffff;
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
-        article p {
-            color: var(--text-muted);
-            font-size: 0.98rem;
-        }
-
-        /* === UPLOAD FOTO INTERAKTIF & GALERI === */
-        .upload-card {
-            background: rgba(15, 20, 30, 0.8);
-            border: 2px dashed rgba(230, 57, 70, 0.4);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            margin-bottom: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .upload-card:hover {
-            border-color: var(--accent-red);
-            background: rgba(230, 57, 70, 0.05);
-        }
-
-        .form-group {
-            margin-top: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .input-file {
-            display: none;
-        }
-
-        .btn-upload-label {
-            background: rgba(230, 57, 70, 0.2);
-            color: #ffffff;
-            border: 1px solid rgba(230, 57, 70, 0.5);
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-upload-label:hover {
-            background: var(--accent-red);
-        }
-
-        .input-caption {
-            width: 100%;
-            max-width: 500px;
-            padding: 10px 16px;
+        /* Area Form Upload Foto Auto-Save */
+        .upload-box {
+            background-color: rgba(11, 12, 16, 0.9);
+            padding: 20px;
             border-radius: 8px;
-            border: 1px solid var(--card-border);
-            background: rgba(8, 10, 15, 0.9);
-            color: var(--text-main);
-            font-family: var(--font-main);
-            font-size: 0.9rem;
-            outline: none;
+            border: 2px dashed #e63946;
+            margin-bottom: 25px;
         }
 
-        .input-caption:focus {
-            border-color: var(--accent-red);
+        .upload-box h4 {
+            color: #66fcf1;
+            margin-bottom: 12px;
         }
 
-        .gallery-grid {
+        .upload-box input[type="file"],
+        .upload-box input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            background-color: #1f2833;
+            border: 1px solid #45a29e;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+
+        .btn-upload {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-upload:hover {
+            background-color: #b8202c;
+        }
+
+        /* Grid Galeri Foto */
+        .galeri-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
 
-        .gallery-item {
-            position: relative;
-            background: rgba(10, 13, 20, 0.8);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
+        .galeri-card {
+            background-color: #0b0c10;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-            display: flex;
-            flex-direction: column;
-            animation: fadeIn 0.4s ease-in-out;
+            border: 1px solid #1f2833;
+            position: relative;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .gallery-item img {
+        .galeri-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             display: block;
         }
 
-        .gallery-item-body {
-            padding: 12px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
+        .galeri-card p {
+            padding: 12px;
+            font-size: 0.9rem;
+            color: #c5c6c7;
         }
 
-        .gallery-item-caption {
-            font-size: 0.88rem;
-            color: var(--text-main);
-            word-break: break-word;
-        }
-
-        .btn-delete {
-            background: rgba(239, 68, 68, 0.2);
-            color: #f87171;
-            border: 1px solid rgba(239, 68, 68, 0.4);
-            padding: 6px 10px;
-            border-radius: 6px;
+        .btn-hapus {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(230, 57, 70, 0.9);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
             cursor: pointer;
             font-size: 0.8rem;
-            transition: all 0.2s ease;
-            flex-shrink: 0;
         }
 
-        .btn-delete:hover {
-            background: #dc2626;
-            color: white;
+        .btn-hapus:hover {
+            background-color: #ff0000;
         }
 
-        /* === MEDIA VIDEO CONTAINER === */
+        /* Video Container Responsive */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* Ratio 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 12px;
-            border: 1px solid var(--card-border);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            background: #000;
+            border-radius: 8px;
             margin-top: 15px;
         }
 
-        .video-container iframe, .video-container video {
+        .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -318,212 +214,126 @@
             border: 0;
         }
 
-        /* === WADAH PUISI KIZUATO === */
-        .puisi-box {
-            background: rgba(8, 10, 15, 0.85);
-            border: 1px solid var(--card-border);
-            border-left: 4px solid var(--accent-red);
-            padding: 25px;
-            border-radius: 10px;
-            margin-top: 15px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        pre.puisi-content {
-            font-family: var(--font-main);
+        /* Styling Puisi Kizuato */
+        .puisi-container {
+            font-family: inherit;
             white-space: pre-wrap;
-            word-wrap: break-word;
-            color: #cbd5e1;
+            color: #d1d5db;
             font-style: italic;
-            font-size: 0.98rem;
-            line-height: 1.85;
-        }
-
-        /* === TOMBOL INTERAKTIF SAPAAN === */
-        .btn-action {
-            background: linear-gradient(135deg, var(--accent-red) 0%, #b8202c 100%);
-            color: white;
-            border: none;
-            padding: 12px 26px;
-            margin-top: 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 0.92rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
-        }
-
-        .btn-action:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 57, 70, 0.5);
-            background: linear-gradient(135deg, var(--accent-red-hover) 0%, #d12331 100%);
-        }
-
-        #pesanBox {
+            line-height: 1.8;
+            background-color: rgba(11, 12, 16, 0.85);
+            padding: 22px;
+            border-left: 4px solid #e63946;
+            border-radius: 6px;
             margin-top: 15px;
-            padding: 12px 18px;
-            background: rgba(230, 57, 70, 0.15);
-            border: 1px solid rgba(230, 57, 70, 0.3);
-            border-radius: 8px;
-            color: #fca5a5;
-            display: none;
-            font-size: 0.92rem;
+            font-size: 0.95rem;
         }
 
-        /* === FOOTER === */
+        /* Footer */
         footer {
             text-align: center;
-            padding: 35px 20px;
-            background: #06070a;
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            border-top: 1px solid var(--card-border);
+            background-color: #0b0c10;
+            padding: 25px;
+            color: #888888;
+            border-top: 1px solid #1f2833;
         }
 
-        /* RESPONSIVE LAYOUT */
-        @media (max-width: 640px) {
-            .header-title { font-size: 2rem; }
-            nav { gap: 8px; padding: 10px; }
-            nav a { font-size: 0.82rem; padding: 5px 10px; }
-            section { padding: 20px 16px; }
-            .gallery-grid { grid-template-columns: 1fr; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            nav a { margin: 0 6px; font-size: 0.85rem; }
+            section { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER / LANDING TITLE -->
     <header>
-        <h1 class="header-title">Ardyansyah Yudapratama</h1>
-        <p class="header-tagline"><i class="fa-solid fa-motorcycle"></i> Otomotif • Riding • Galeri • Puisi</p>
+        <h1>Ardyansyah Yudapratama</h1>
+        <p>Hobi, Modifikasi Motor, & Karya Tulis</p>
     </header>
 
-    <!-- NAVIGASI KATEGORI (SMOOTH SCROLL) -->
-    <nav id="navbar">
-        <a href="#beranda" class="active"><i class="fa-solid fa-house"></i> Beranda</a>
-        <a href="#tentang"><i class="fa-solid fa-user"></i> Tentang</a>
-        <a href="#hobi"><i class="fa-solid fa-gauge-high"></i> Hobi</a>
-        <a href="#galeri"><i class="fa-solid fa-images"></i> Galeri Foto</a>
-        <a href="#video"><i class="fa-solid fa-video"></i> Video</a>
-        <a href="#puisi"><i class="fa-solid fa-pen-nib"></i> Puisi</a>
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#hobi">Hobi</a>
+        <a href="#galeri">Galeri Foto</a>
+        <a href="#video">Video</a>
+        <a href="#puisi">Puisi</a>
     </nav>
 
-    <!-- KONTEN UTAMA -->
     <main>
-
-        <!-- SEKSI 1: BERANDA -->
+        <!-- BERANDA -->
         <section id="beranda">
-            <h2><i class="fa-solid fa-compass"></i> Selamat Datang</h2>
+            <h2>Selamat Datang</h2>
             <p>
-                Selamat datang di website pribadi saya! Tempat di mana saya membagikan kisah perjalanan otomotif bersama <strong>Hiyuki</strong> (motor sport kesayangan), dokumentasi foto dan video *riding* cinematic di berbagai lokasi indah, serta karya tulis puisi personal.
+                Ini adalah website pribadi tempat saya mendokumentasikan hobi modifikasi otomotif, perjalanan riding, serta karya tulisan pribadi.
             </p>
         </section>
 
-        <!-- SEKSI 2: TENTANG SAYA -->
+        <!-- TENTANG SAYA -->
         <section id="tentang">
-            <h2><i class="fa-solid fa-id-card"></i> Tentang Saya</h2>
+            <h2>Tentang Saya</h2>
             <p>
-                Saya adalah mahasiswa yang memiliki minat tinggi dalam dunia otomotif, teknik modifikasi kendaraan, teknologi digital, dan pengembangan website. Bagi saya, merawat mesin motor dan menulis puisi adalah cara mengekspresikan karakter dan perjalanan hidup.
+                Saya tertarik pada dunia otomotif, teknologi, dan pengembangan website. Menikmati proses mekanis kendaraan sekaligus merancang tampilan digital.
             </p>
         </section>
 
-        <!-- SEKSI 3: HOBI SAYA -->
+        <!-- HOBI -->
         <section id="hobi">
-            <h2><i class="fa-solid fa-motorcycle"></i> Hobi & Otomotif</h2>
-
+            <h2>Hobi Saya</h2>
             <article>
-                <h3><i class="fa-solid fa-wrench" style="color: var(--accent-red);"></i> Modifikasi Motor "Hiyuki"</h3>
-                <p>
-                    Menyukai seni merawat dan memodifikasi motor sport berwarna merah yang diberi nama <strong>Hiyuki</strong>. Setiap detail modifikasi dirancang untuk performa, kenyamanan saat touring jarak jauh, dan estetika visual.
-                </p>
+                <h3>🏍️ Otomotif & Riding</h3>
+                <p>Mempelajari mekanis mesin, memodifikasi motor sport (Hiyuki), serta melakukan perjalanan ke tempat-tempat berudara sejuk seperti Ciwidey dan Bandung.</p>
             </article>
-
-            <article style="margin-top: 20px;">
-                <h3><i class="fa-solid fa-route" style="color: var(--accent-red);"></i> Riding & Exploration</h3>
-                <p>
-                    Menikmati momen berkendara menyusuri rute-rute dengan pemandangan indah, mulai dari dinginnya tikungan Ciwidey hingga lanskap malam kota Bandung.
-                </p>
+            <article>
+                <h3>💻 Teknologi & Web Development</h3>
+                <p>Mengembangkan aplikasi web menggunakan HTML, CSS, dan JavaScript.</p>
             </article>
-
-            <!-- TOMBOL INTERAKTIF -->
-            <button class="btn-action" onclick="tampilkanPesan()">
-                <i class="fa-solid fa-heart"></i> Klik Sapaan
-            </button>
-            <div id="pesanBox"></div>
         </section>
 
-        <!-- SEKSI 4: FITUR UPLOAD & GALERI FOTO INTERAKTIF -->
+        <!-- GALERI FOTO (WITH AUTO-SAVE) -->
         <section id="galeri">
-            <h2><i class="fa-solid fa-images"></i> Galeri Foto Modifikasi & Riding</h2>
+            <h2>Galeri Foto (Auto-Save)</h2>
             
-            <!-- WADAH FORM UPLOAD FOTO -->
-            <div class="upload-card">
-                <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2rem; color: var(--accent-red); margin-bottom: 10px;"></i>
-                <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 6px;">Unggah Foto Kustom Kamu</h3>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
-                    Tambahkan foto motor atau momen riding langsung dari galeri perangkatmu secara *real-time*.
-                </p>
-
-                <div class="form-group">
-                    <label for="fileInput" class="btn-upload-label">
-                        <i class="fa-solid fa-file-image"></i> Pilih File Foto
-                    </label>
-                    <input type="file" id="fileInput" class="input-file" accept="image/*" onchange="previewSelectedFile(event)">
-                    <span id="fileNameDisplay" style="font-size: 0.82rem; color: var(--text-muted);">Belum ada file dipilih</span>
-
-                    <input type="text" id="captionInput" class="input-caption" placeholder="Tuliskan keterangan/caption foto (Opsional)...">
-                    
-                    <button type="button" class="btn-action" style="margin-top: 5px; padding: 10px 22px;" onclick="uploadFotoCustom()">
-                        <i class="fa-solid fa-plus"></i> Tambahkan ke Galeri
-                    </button>
-                </div>
+            <!-- Form Upload -->
+            <div class="upload-box">
+                <h4>Tambah Foto Baru ke Galeri</h4>
+                <input type="file" id="inputFoto" accept="image/*">
+                <input type="text" id="captionFoto" placeholder="Tuliskan keterangan foto (misal: Riding ke Ciwidey)...">
+                <button class="btn-upload" onclick="simpanFoto()">Unggah & Simpan Foto</button>
             </div>
 
-            <!-- GRID TEMPAT FOTO TAMPIL -->
-            <div id="galleryGrid" class="gallery-grid">
-                <!-- Foto bawaan 1 -->
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80" alt="Motor Hiyuki">
-                    <div class="gallery-item-body">
-                        <span class="gallery-item-caption"><i class="fa-solid fa-camera" style="color: var(--accent-red);"></i> Hiyuki - Red Sport Modification</span>
-                        <button class="btn-delete" onclick="hapusFoto(this)"><i class="fa-solid fa-trash"></i></button>
-                    </div>
+            <!-- Tempat Menampilkan Foto yang Tersimpan -->
+            <div class="galeri-grid" id="containerGaleri">
+                <!-- Foto default jika belum ada upload -->
+                <div class="galeri-card" id="fotoDefault">
+                    <img src="foto-motor.jpg" alt="Modifikasi Hiyuki" onerror="this.src='https://via.placeholder.com/400x250?text=Hiyuki+Motor'">
+                    <p>Hiyuki - Merah seperti darah yang masih hangat.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SEKSI 5: VIDEO CINEMATIC RIDING -->
+        <!-- VIDEO CINEMATIC -->
         <section id="video">
-            <h2><i class="fa-solid fa-video"></i> Video Cinematic Riding</h2>
-            <article style="background: transparent; border: none; padding: 0;">
-                <p style="margin-bottom: 10px;">Rekaman petualangan menyusuri keindahan jalanan dan lanskap alam.</p>
+            <h2>Cinematic Riding Video</h2>
+            <article>
+                <h3>Video Perjalanan</h3>
+                <p>Satu cuplikan perjalanan menyusuri tikungan dan pemandangan indah.</p>
                 <div class="video-container">
                     <iframe 
-                        src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0" 
-                        title="Cinematic Riding Video" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
                         allowfullscreen>
                     </iframe>
                 </div>
             </article>
         </section>
 
-        <!-- SEKSI 6: KARYA PUISI (KIZUATO) -->
+        <!-- PUISI -->
         <section id="puisi">
-            <h2><i class="fa-solid fa-feather-pointed"></i> Karya Puisi</h2>
-            <article style="border: none; background: transparent; padding: 0;">
-                <h3 style="font-size: 1.3rem; color: #ffffff;"><i class="fa-solid fa-book-open" style="color: var(--accent-red);"></i> Kizuato (Bekas Luka)</h3>
-                <p style="margin-bottom: 12px; font-size: 0.88rem; color: var(--text-muted);">Sebuah catatan perjalanan, luka, dan ketabahan.</p>
-                
-                <div class="puisi-box">
-                    <pre class="puisi-content">
-Kizuato (Bekas Luka)
-
+            <h2>Karya Puisi</h2>
+            <article>
+                <h3>Kizuato (Bekas Luka)</h3>
+                <pre class="puisi-container">
 Aku pernah ada di ruang yang sama
 tapi tidak pernah benar-benar dihitung —
 tertawa di sela percakapan orang lain,
@@ -598,107 +408,93 @@ adalah bentuk keberanian
 yang paling sunyi —
 
 dan paling nyata.
-                    </pre>
-                </div>
+                </pre>
             </article>
         </section>
-
     </main>
 
-    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Ardyansyah Yudapratama. Built with passion & dedication.</p>
+        <p>&copy; 2026 Ardyansyah Yudapratama</p>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- SCRIPT JAVASCRIPT UNTUK AUTO-SAVE MEMORI (localStorage) -->
     <script>
-        // Fitur Tombol Sapaan
-        function tampilkanPesan() {
-            const pesanBox = document.getElementById('pesanBox');
-            pesanBox.style.display = 'block';
-            pesanBox.innerHTML = '<i class="fa-solid fa-circle-check"></i> Terima kasih sudah berkunjung! Salam persaudaraan otomotif dan literasi.';
-        }
+        // Fungsi untuk memuat foto dari localStorage saat halaman dibuka
+        document.addEventListener('DOMContentLoaded', muatFotoTersimpan);
 
-        // Tampilkan nama file yang dipilih di form
-        function previewSelectedFile(event) {
-            const input = event.target;
-            const display = document.getElementById('fileNameDisplay');
-            if (input.files && input.files[0]) {
-                display.innerText = input.files[0].name;
+        function simpanFoto() {
+            const inputFoto = document.getElementById('inputFoto');
+            const captionFoto = document.getElementById('captionFoto');
+
+            if (inputFoto.files && inputFoto.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    const dataGambar = e.target.result;
+                    const teksCaption = captionFoto.value.trim() || 'Foto Riding / Modifikasi';
+
+                    // Ambil daftar foto lama dari localStorage (jika ada)
+                    let daftarFoto = JSON.parse(localStorage.getItem('fotoArdyansyah')) || [];
+
+                    // Tambahkan foto baru
+                    const fotoBaru = {
+                        id: Date.now(),
+                        image: dataGambar,
+                        caption: teksCaption
+                    };
+
+                    daftarFoto.push(fotoBaru);
+
+                    // Simpan kembali ke localStorage
+                    localStorage.setItem('fotoArdyansyah', JSON.stringify(daftarFoto));
+
+                    // Reset Input & Muat Ulang Tampilan Galeri
+                    inputFoto.value = '';
+                    captionFoto.value = '';
+                    muatFotoTersimpan();
+                };
+
+                reader.readAsDataURL(inputFoto.files[0]);
             } else {
-                display.innerText = 'Belum ada file dipilih';
-            }
-        }
-
-        // Logika Upload Foto Real-Time menggunakan FileReader JS
-        function uploadFotoCustom() {
-            const fileInput = document.getElementById('fileInput');
-            const captionInput = document.getElementById('captionInput');
-            const galleryGrid = document.getElementById('galleryGrid');
-
-            if (!fileInput.files || !fileInput.files[0]) {
                 alert('Silakan pilih file foto terlebih dahulu!');
-                return;
             }
+        }
 
-            const file = fileInput.files[0];
-            const reader = new FileReader();
+        function muatFotoTersimpan() {
+            const container = document.getElementById('containerGaleri');
+            let daftarFoto = JSON.parse(localStorage.getItem('fotoArdyansyah')) || [];
 
-            reader.onload = function(e) {
-                const imageUrl = e.target.result;
-                const captionText = captionInput.value.trim() !== '' ? captionInput.value.trim() : 'Momen Otomotif Baru';
+            // Bersihkan container galeri
+            container.innerHTML = '';
 
-                // Buat elemen item galeri baru
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'gallery-item';
-                itemDiv.innerHTML = `
-                    <img src="${imageUrl}" alt="Uploaded Image">
-                    <div class="gallery-item-body">
-                        <span class="gallery-item-caption"><i class="fa-solid fa-camera" style="color: var(--accent-red);"></i> ${captionText}</span>
-                        <button class="btn-delete" onclick="hapusFoto(this)"><i class="fa-solid fa-trash"></i></button>
-                    </div>
+            // Tampilkan foto default awal
+            const cardDefault = document.createElement('div');
+            cardDefault.className = 'galeri-card';
+            cardDefault.innerHTML = `
+                <img src="foto-motor.jpg" alt="Modifikasi Hiyuki" onerror="this.src='https://via.placeholder.com/400x250?text=Hiyuki+Motor'">
+                <p>Hiyuki - Merah seperti darah yang masih hangat.</p>
+            `;
+            container.appendChild(cardDefault);
+
+            // Tampilkan foto-foto yang tersimpan di localStorage
+            daftarFoto.forEach(foto => {
+                const card = document.createElement('div');
+                card.className = 'galeri-card';
+                card.innerHTML = `
+                    <button class="btn-hapus" onclick="hapusFoto(${foto.id})">Hapus</button>
+                    <img src="${foto.image}" alt="Foto Upload">
+                    <p>${foto.caption}</p>
                 `;
-
-                // Sisipkan di awal grid galeri
-                galleryGrid.insertBefore(itemDiv, galleryGrid.firstChild);
-
-                // Reset form input
-                fileInput.value = '';
-                captionInput.value = '';
-                document.getElementById('fileNameDisplay').innerText = 'Belum ada file dipilih';
-            };
-
-            reader.readAsDataURL(file);
+                container.appendChild(card);
+            });
         }
 
-        // Fungsi Hapus Foto dari Galeri
-        function hapusFoto(buttonElement) {
-            const item = buttonElement.closest('.gallery-item');
-            if (item) {
-                item.remove();
-            }
+        function hapusFoto(id) {
+            let daftarFoto = JSON.parse(localStorage.getItem('fotoArdyansyah')) || [];
+            daftarFoto = daftarFoto.filter(foto => foto.id !== id);
+            localStorage.setItem('fotoArdyansyah', JSON.stringify(daftarFoto));
+            muatFotoTersimpan();
         }
-
-        // Highlight Navigasi Aktif saat Scroll
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= (sectionTop - 150)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
     </script>
 </body>
 </html>
